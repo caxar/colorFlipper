@@ -6,4 +6,9 @@ const currentColor = document.querySelector('.color'),
 	  changeBtn = document.getElementById('change');
 
 
-
+changeBtn.addEventListener('click', () => {
+	const random = Math.floor(Math.random() * colors.length);
+	let randomColor = colors[random];
+	currentColor.innerText = randomColor;
+	document.body.style.background = randomColor;
+});
